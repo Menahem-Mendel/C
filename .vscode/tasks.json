@@ -9,6 +9,8 @@
             "command": "gcc",
             "args": [
                 "-g",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
                 "${file}"
             ],
             "group": {
