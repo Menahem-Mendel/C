@@ -19,7 +19,6 @@ int htoi(char string[])
     index = number = 0;
     in = YES;
 
-    // skip 0x or 0X not while because only one 0 and x
     if (string[index] == '0')
     {
         index++;
