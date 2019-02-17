@@ -33,7 +33,4 @@ int get_line(char string[], int limit)
 
 void fold(char string[], int index)
 {
-    int i, j;
-    for (i = index - 50, j = 0; i < index - 1; index++, j++)
-        string[j] = string[i];
 }
