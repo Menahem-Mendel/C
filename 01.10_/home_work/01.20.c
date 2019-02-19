@@ -57,7 +57,7 @@ void detab(char str[])
 
 void copy(char to[], char from[])
 {
-	for (int index = 0; to[index] != '\0'; ++index)// проверить
+	for (int index = 0; to[index] != '\0'; ++index) // проверить
 		to[index] = 0;
 
 	for (int index = 0; (to[index] = from[index]) != '\0'; ++index)

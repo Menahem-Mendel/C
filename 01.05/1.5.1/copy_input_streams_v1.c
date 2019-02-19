@@ -2,13 +2,13 @@
 
 int main()
 {
-    int input;
-    
-    input = getchar();
-    while (input != EOF)
-    {
-        putchar(input);
-        input = getchar();
-    }
-    return 0;
+	int input;
+
+	input = getchar();
+	while (input != EOF)
+	{
+		putchar(input);
+		input = getchar();
+	}
+	return 0;
 }

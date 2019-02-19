@@ -7,28 +7,31 @@ void fold(char[], int);
 
 int main()
 {
-    int length;
-    char line[MAXLINE];
+	int length;
+	char line[MAXLINE];
 
-    while ((length = get_line(line, MAXLINE)) > 0)
-        fold(line, length);
+	while ((length = get_line(line, MAXLINE)) > 0)
+	{
+		fold(line, length);
+		printf("%s", line);
+	}
 
-    return 0;
+	return 0;
 }
 
 int get_line(char string[], int limit)
 {
-    int input, index;
+	int input, index;
 
-    for (index = 0; index < limit - 1 && (input = getchar()) != EOF && input != '\n'; index++)
-        string[index] = input;
+	for (index = 0; index < limit - 1 && (input = getchar()) != EOF && input != '\n'; index++)
+		string[index] = input;
 
-    if (input == '\n')
-        string[index++] = input;
+	if (input == '\n')
+		string[index++] = input;
 
-    string[index] = '\0';
+	string[index] = '\0';
 
-    return index;
+	return index;
 }
 
 void fold(char string[], int index)
