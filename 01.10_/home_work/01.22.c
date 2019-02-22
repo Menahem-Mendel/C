@@ -1,9 +1,9 @@
 #include <stdio.h>
-
+#include <stdbool.h>
 #define MAXLINE 1000
 
 int get_line(char[], int);
-void fold(char[], int);
+int fold(char[], int);
 
 int main()
 {
@@ -34,6 +34,17 @@ int get_line(char string[], int limit)
 	return index;
 }
 
-void fold(char string[], int index)
+int fold(char string[], int index)
 {
+	int i, enough;
+	index--;
+	enough = index;
+
+	for (i = 49; i >= 0 && enough >= 50; i--, index--)
+		string[i] = string[index];
+
+	for (; index > 49; index--)
+		string[index] = 0;
+
+	return index;
 }
