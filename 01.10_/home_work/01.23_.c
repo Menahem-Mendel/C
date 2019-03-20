@@ -57,7 +57,7 @@ int comRemove(char line[], int end)
 			new_line[j++] = line[i];
 	}
 	copy(new_line, line);
-K
+
 	return i;
 }
 

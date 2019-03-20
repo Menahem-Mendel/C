@@ -1,3 +1,6 @@
+// this program needs to output
+// fahrenheit converted form the celsius
+
 #include <stdio.h>
 
 int main()
