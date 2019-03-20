@@ -11,8 +11,8 @@ int main()
 
         if (prime == 1)
         {
-            printf("%d ", num - n1);
-            //printf("%d ", num);
+            //printf("%d ", num - n1);
+            printf("%d %d| ", num-1, num+1);
             n1 = num;
         }
     }
