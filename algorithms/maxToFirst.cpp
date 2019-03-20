@@ -17,7 +17,6 @@ int main()
     PrintArray(array);
     MaxToFirst(array);
     PrintArray(array);
-    system("pause");
 }
 
 int ToArray(int array[])
