@@ -11,8 +11,8 @@ int main()
 
         if (prime == 1)
         {
-            //printf("%d ", num - n1);
-            printf("%d %d| ", num-1, num+1);
+            printf("%d ", num);
+            //printf("%d %d| ", num-1, num+1);
             n1 = num;
         }
     }
@@ -21,7 +21,6 @@ int main()
 
 int isPrime(int num, int i)
 {
-
     if (i == 1)
     {
         return 1; // it's a prime number
