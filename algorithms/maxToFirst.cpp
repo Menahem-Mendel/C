@@ -52,6 +52,7 @@ int MaxToFirst(int array[])
 			max = i;
 
 	SwapMaxToFirst(max, array);
+
 	return 0;
 }
 
@@ -60,5 +61,6 @@ int SwapMaxToFirst(int max, int array[])
 	int temp = array[0];
 	array[0] = array[max];
 	array[max] = temp;
+
 	return 0;
 }
