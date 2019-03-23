@@ -44,7 +44,7 @@
 		{
 			"label": "build objects",
 			"type": "shell",
-			"command": "gcc",
+			"command": "g++",
 			"args": [
 				"-c",
 				"-g",
@@ -61,7 +61,7 @@
 		{
 			"label": "link objects",
 			"type": "shell",
-			"command": "gcc",
+			"command": "g++",
 			"args": [
 				"-o",
 				"release.exe",

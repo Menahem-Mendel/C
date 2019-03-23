@@ -1,11 +1,14 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-float y(float x);
+#define E 2.71828285f
+
+double y(double x);
 
 int main()
 {
-	float supX, infX, step, x;
+	double supX, infX, step, x;
 
 	cout << "write diapasone from: ";
 	cin >> infX;
@@ -22,9 +25,13 @@ int main()
 	return 0;
 }
 
-float y(float x)
+double y(double x)
 {
-	if (x < 0.0f)
-		return x * -1.0f;
-	return x * x;
+	if (-5.0f < x && x <= 1.0f)
+		return pow(x, -15.0f);
+	else if (1.0f < x && x < 2.0f)
+		return (sqrt(x) * sin(pow(x, 2.0f)) - 1.3f) / ((pow(x, (1.0f / 3.0f)) + pow(E, 2.0f * x) + abs(cos(x))));
+	else
+		return pow(x, 10.0f);
+	return 1;
 }
