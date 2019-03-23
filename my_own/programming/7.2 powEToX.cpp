@@ -35,14 +35,14 @@ double powEtoX(double x, double epsilon)
 {
 	// объявленные переменные (и определение некоторых)
 	double slog = 1.0f; // слогаемое
-	double sum = 1.0f;  // итоговое число
+	double sum  = 1.0f;  // итоговое число
 	double n;			// от 0 -> ∞
 	int counter = 0;	// счетчик
 
 	for (n = 1.0f; slog > epsilon; n += 1.0f)
 	{
 		slog *= x / n; // x^n * x = x^(n+1), (n-1) * n = n! - формула n -> ∞ (x^n)/n!
-		sum += slog;   // итог + слогаемое
+		sum  += slog;   // итог + слогаемое
 		counter++;	 // счетчик + 1
 	}
 	cout << "counter = " << counter << endl;

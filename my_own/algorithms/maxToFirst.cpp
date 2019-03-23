@@ -22,10 +22,11 @@ int main()
 int ToArray(int array[])
 {
 	int random;
+	int i;
 
 	srand(time(0));
 
-	for (int i = 0; i < SIZE; i++)
+	for (i = 0; i < SIZE; i++)
 	{
 		random = rand() % 100;
 		array[i] = random;
@@ -36,8 +37,9 @@ int ToArray(int array[])
 
 int PrintArray(int array[])
 {
+	int i;
 	cout << "\n";
-	for (int i = 0; i < SIZE; i++)
+	for (i = 0; i < SIZE; i++)
 		cout << array[i] << " ";
 
 	return 0;
@@ -46,8 +48,9 @@ int PrintArray(int array[])
 int MaxToFirst(int array[])
 {
 	int max = 0;
+	int i;
 
-	for (int i = 0; i < SIZE; i++)
+	for (i = 0; i < SIZE; i++)
 		if (array[i] > array[max])
 			max = i;
 
