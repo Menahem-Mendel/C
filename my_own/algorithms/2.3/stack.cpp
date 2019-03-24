@@ -1,26 +1,24 @@
 #include <iostream>
-#include "calculator.h"
+#include "declarations.h"
 
-#define SIZE 100
-
-double steck[SIZE];
+double stack[SIZE];
 int sp = 0;
 
 void push(double x)
 {
     if (sp < SIZE)
-        steck[sp++] = x;
+        stack[sp++] = x;
     else
-        std::cout << "error: stack full of variables!" << std::endl;
+        std::cout << "\nerror: stack full of variables!" << std::endl;
 }
 
 double pop()
 {
     if (sp > 0)
-        return steck[--sp];
+        return stack[--sp];
     else
     {
-        std::cout << "error: no variables in the steck" << std::endl;
+        std::cout << "\nerror: no variables in the stack" << std::endl;
         return 0.0f;
     }
 }
