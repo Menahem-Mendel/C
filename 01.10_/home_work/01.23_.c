@@ -1,69 +1,58 @@
 #include <stdio.h>
 
-#define MAXLINE 1000
+#define SIZE 100
 
-int comRemove(char[], int);
-int get_line(char[], int);
-void copy(char[], char[]);
-
+void inputStr(char[]);
+void deleteComments(char[]);
+void swap(char[], char[]);
 
 int main()
 {
-	int length;
-	char line[MAXLINE];
+	char string[SIZE];
+	int index;
 
-	while ((length = get_line(line, MAXLINE)) > 0)
-	{
-		comRemove(line, length);
-		printf("%s", line);
-	}
+	inputStr(string);
+	deleteComments(string);
+
+	printf("%s", string);
+
 	return 0;
 }
 
-int get_line(char string[], int limit)
-{
-	int input, index;
-
-	for (index = 0; index < limit - 1 && (input = getchar()) != EOF && input != '\n'; index++)
-		string[index] = input;
-
-	if (input == '\n')
-		string[index++] = input;
-
-	string[index] = '\0';
-
-	return index;
-}
-
-int comRemove(char line[], int end)
-{
-	int i, com, j;
-	com = j = 0;
-
-	char new_line[MAXLINE];
-
-	for (i = 0; i < end - 1; i++)
-	{
-		if (line[i] == '*' && line[i - 1] == '/')
-		{
-			com = 1;
-		}
-		else if (line[i] == '/' && line[i - 1] == '*')
-		{
-			com = 0;
-		}
-
-		if (com != 0)
-			new_line[j++] = line[i];
-	}
-	copy(new_line, line);
-
-	return i;
-}
-
-void copy(char from[], char to[])
+void inputStr(char str[])
 {
 	int i;
-	for (i = 0; (to[i] = from[i]) != EOF; i++)
+	int input;
+
+	for (i = 0; i < SIZE - 1 && (input = getchar()) != EOF && input != '\n'; i++)
+		str[i] = input;
+
+	if (input == '\n')
+		str[i++] = input;
+
+	str[i] = '\0';
+}
+
+void deleteComments(char str[])
+{
+	int i;
+	int j = 0;
+	char str2[SIZE];
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if ((str[i] == '/' && str[i + 1] == '*') || (str[i] != '*' && str[i - 1] != '/'))
+			;
+		else
+			str2[j++] = str[i];
+	}
+
+	swap(str, str2);
+}
+
+void swap(char str[], char str2[])
+{
+	int i;
+	for (i = 0; (str[i] = str2[i]) != '\0'; i++)
 		;
 }
