@@ -1,5 +1,5 @@
 #include <iostream>
-#include "declarations.h"
+#include "declarations.hpp"
 
 double stack[SIZE];
 int sp = 0;

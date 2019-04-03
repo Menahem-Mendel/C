@@ -4,7 +4,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "debug c",
+			"label": "debug file",
 			"type": "shell",
 			"command": "gcc",
 			"args": [
@@ -23,7 +23,25 @@
 			]
 		},
 		{
-			"label": "debug cpp",
+			"label": "build program",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o",
+				"${workspaceFolder}/RELEASE.exe",
+				"${fileDirname}/*.cpp"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "debug file++",
 			"type": "shell",
 			"command": "g++",
 			"args": [
@@ -42,30 +60,14 @@
 			]
 		},
 		{
-			"label": "build objects cpp",
+			"label": "build program++",
 			"type": "shell",
 			"command": "g++",
 			"args": [
-				"-c",
 				"-g",
-				"${fileDirname}/*.cpp"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"problemMatcher": [
-				"$gcc"
-			]
-		},
-		{
-			"label": "link objects cpp",
-			"type": "shell",
-			"command": "g++",
-			"args": [
 				"-o",
-				"release.exe",
-				"${workspaceFolder}/*.o",
+				"${workspaceFolder}/RELEASE.exe",
+				"${fileDirname}/*.cpp"
 			],
 			"group": {
 				"kind": "build",

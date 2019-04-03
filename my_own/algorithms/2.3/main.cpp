@@ -1,5 +1,5 @@
 #include <iostream>
-#include "declarations.h"
+#include "declarations.hpp"
 
 using namespace std;
 
@@ -11,9 +11,9 @@ int main()
 	{
 		cout << "1. show stack elements\n"
 			 << "2. write equation\n"
-			 << "4. clear\n"
-			 << "5. print the number of elements of the structure, the index of the first and last element\n"
-			 << "6. show result\n"
+			 << "3. clear\n"
+			 << "4. print the number of elements of the structure, the index of the first and last element\n"
+			 << "5. show result\n"
 			 << "-1. exit"
 			 << endl;
 
@@ -25,16 +25,16 @@ int main()
 			get_elemnts();
 			break;
 		case 2:
-			result = writeIn();
+			writeIn();
+			break;
+		case 3:
+			clear();
 			break;
 		case 4:
-			clear();
+			cout << top() << endl;
 			break;
 		case 5:
 			cout << top() << endl;
-			break;
-		case 6:
-			cout << result << endl;
 			break;
 		default:
 			cout << ((action != -1) ? "undefined error" : NULL) << endl;

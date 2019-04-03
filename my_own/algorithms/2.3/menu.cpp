@@ -1,11 +1,12 @@
 #include <iostream>
-#include "declarations.h"
+#include "declarations.hpp"
 
 double writeIn()
 {
 	int type;
 	double second_op;
 	char input[SIZE];
+	input[0] = 0;
 
 	while ((type = getop(input)) != EOF)
 	{
@@ -40,5 +41,6 @@ double writeIn()
 			break;
 		}
 	}
+
 	return top();
 }
