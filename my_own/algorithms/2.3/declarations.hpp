@@ -20,4 +20,4 @@ int getch();
 void ungetch(int);
 
 // menu.cpp
-double writeIn();
+double writeIn(char[]);

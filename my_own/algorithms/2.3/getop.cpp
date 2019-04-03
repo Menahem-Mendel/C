@@ -12,7 +12,7 @@ int getop(char s[])
 	s[1] = '\0';
 	if (!isdigit(c) && c != '.')
 		return c;
-	i = 0;
+	i = 1;
 	if (isdigit(c))
 		while (isdigit(s[++i] = c = getch()))
 			;

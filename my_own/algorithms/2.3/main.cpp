@@ -7,6 +7,8 @@ int main()
 {
 	int action;
 	double result;
+	char str[SIZE];
+
 	do
 	{
 		cout << "1. show stack elements\n"
@@ -25,7 +27,8 @@ int main()
 			get_elemnts();
 			break;
 		case 2:
-			writeIn();
+		cin >> str;
+			writeIn(str);
 			break;
 		case 3:
 			clear();

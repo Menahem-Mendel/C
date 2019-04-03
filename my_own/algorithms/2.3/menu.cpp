@@ -1,12 +1,10 @@
 #include <iostream>
 #include "declarations.hpp"
 
-double writeIn()
+double writeIn(char input[SIZE])
 {
 	int type;
 	double second_op;
-	char input[SIZE];
-	input[0] = 0;
 
 	while ((type = getop(input)) != EOF)
 	{
