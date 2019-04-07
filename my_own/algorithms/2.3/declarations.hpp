@@ -1,5 +1,5 @@
 #define SIZE 100
-#define NUMBER 0
+#define NUMBER '0'
 
 // stack.cpp
 extern double stack[];
@@ -10,6 +10,7 @@ double pop();
 double top();
 void get_elemnts();
 int clear();
+int get_sp();
 
 // getop.cpp
 extern char buffer[];

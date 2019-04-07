@@ -14,9 +14,9 @@ int main()
 		cout << "1. show stack elements\n"
 			 << "2. write equation\n"
 			 << "3. clear\n"
-			 << "4. print the number of elements of the structure, the index of the first and last element\n"
+			 << "4. print the number of elements of the structure, the index of last element\n"
 			 << "5. show result\n"
-			 << "-1. exit"
+			 << "-1. exit\n"
 			 << endl;
 
 		cin >> action;
@@ -27,14 +27,14 @@ int main()
 			get_elemnts();
 			break;
 		case 2:
-		cin >> str;
+			cin >> str;
 			writeIn(str);
 			break;
 		case 3:
 			clear();
 			break;
 		case 4:
-			cout << top() << endl;
+			cout << get_sp() << " elements" << endl;
 			break;
 		case 5:
 			cout << top() << endl;

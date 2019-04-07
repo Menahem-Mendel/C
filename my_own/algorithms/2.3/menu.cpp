@@ -5,8 +5,9 @@ double writeIn(char input[SIZE])
 {
 	int type;
 	double second_op;
+	int i;
 
-	while ((type = getop(input)) != EOF)
+	for ((type = getop(input)) != EOF)
 	{
 		switch (type)
 		{

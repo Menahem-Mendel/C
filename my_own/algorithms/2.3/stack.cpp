@@ -34,6 +34,11 @@ double top()
 	}
 }
 
+int get_sp()
+{
+	return sp;
+}
+
 void get_elemnts()
 {
 	int p = sp;
