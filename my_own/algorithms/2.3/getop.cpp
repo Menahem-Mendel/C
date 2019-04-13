@@ -2,27 +2,27 @@
 #include <iostream>
 #include "declarations.hpp"
 
-int getop(char s[])
+int getop(char string[])
 {
 	int i;
 	int c;
 
-	while ((s[0] = c = getch()) == ' ' || c == '\t')
+	while ((string[0] = c = getch()) == ' ' || c == '\t')
 		;
-	s[1] = '\0';
+	string[1] = '\0';
 	if (!isdigit(c) && c != '.')
 		return c;
 	i = 1;
 	if (isdigit(c))
-		while (isdigit(s[++i] = c = getch()))
+		while (isdigit(string[++i] = c = getch()))
 			;
 	if (c == '.')
-		while (isdigit(s[++i] = c = getch()))
+		while (isdigit(string[++i] = c = getch()))
 			;
-	s[i] = '\0';
+	string[i] = '\0';
 	if (c != EOF)
 		ungetch(c);
-	return NUMBER;
+	return EOF;
 }
 
 char buffer[SIZE];

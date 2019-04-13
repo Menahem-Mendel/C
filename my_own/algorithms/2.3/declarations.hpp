@@ -21,4 +21,4 @@ int getch();
 void ungetch(int);
 
 // menu.cpp
-double writeIn(char[]);
+double equation(char[]);

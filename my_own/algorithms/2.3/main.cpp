@@ -7,9 +7,12 @@ int main()
 {
 	int action;
 	double result;
-	char str[SIZE];
+	char input[SIZE];
 
-	do
+	for (int i = 0; i < SIZE - 1; i++)
+		input[i] = '0';
+
+	while (action != -1)
 	{
 		cout << "1. show stack elements\n"
 			 << "2. write equation\n"
@@ -27,9 +30,12 @@ int main()
 			get_elemnts();
 			break;
 		case 2:
-			cin >> str;
-			writeIn(str);
+		{
+			for (int i = 0; input[i] != EOF; i++)
+				cin >> input[i];
+			equation(input);
 			break;
+		}
 		case 3:
 			clear();
 			break;
@@ -43,8 +49,7 @@ int main()
 			cout << ((action != -1) ? "undefined error" : NULL) << endl;
 			break;
 		}
-
-	} while (action != -1);
+	}
 
 	return 0;
 }

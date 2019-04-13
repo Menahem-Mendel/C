@@ -1,18 +1,33 @@
 #include <iostream>
 #include "declarations.hpp"
 
-double writeIn(char input[SIZE])
+double equation(char input[])
 {
-	int type;
 	double second_op;
+	char number[SIZE];
 	int i;
+	int j;
 
-	for ((type = getop(input)) != EOF)
+	for (i = 0; input[i] != EOF; i++)
 	{
-		switch (type)
+		while (input[i] == ' ' || input[i] == '\t')
+			i++;
+
+		if (isdigit(input[i]))
 		{
-		case NUMBER:
-			push(atof(input));
+			for (j = 0; isdigit(input[i]) || input[i] == '.'; j++)
+			{
+				number[j] = input[i++];
+			}
+			push(atof(number));
+		}
+		
+		while (input[i] == ' ' || input[i] == '\t')
+			i++;
+
+		switch (input[i])
+		{
+		case ' ':
 			break;
 		case '+':
 			push(pop() + pop());
