@@ -7,7 +7,7 @@ using namespace std;
 int ToArray(int[]);
 int PrintArray(int[]);
 int MaxToFirst(int[]);
-int SwapMaxToFirst(int, int[]);
+void swap(int *, int *);
 
 int main()
 {
@@ -54,16 +54,14 @@ int MaxToFirst(int array[])
 		if (array[i] > array[max])
 			max = i;
 
-	SwapMaxToFirst(max, array);
+	swap(&array[0], &array[max]);
 
 	return 0;
 }
 
-int SwapMaxToFirst(int max, int array[])
+void swap(int *a, int *b)
 {
-	int temp = array[0];
-	array[0] = array[max];
-	array[max] = temp;
-
-	return 0;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

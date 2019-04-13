@@ -7,10 +7,10 @@ int main()
 {
 	int action;
 	double result;
-	char input[SIZE];
+	int input[SIZE];
 
-	for (int i = 0; i < SIZE - 1; i++)
-		input[i] = '0';
+	for (int i = 0; i < SIZE; i++)
+		input[i] = 0;
 
 	while (action != -1)
 	{

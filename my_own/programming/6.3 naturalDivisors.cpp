@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	int n;
+	unsigned long n;
 
 	cout << "write number: ";
 	cin >> n;
@@ -12,12 +12,10 @@ int main()
 		 << " is: "
 		 << n
 		 << " ";
+
 	for (int i = n / 2; i > 0; i--)
-	{
-		if (n % i == 0)
-		{
+		if (!(n % i))
 			cout << i << " ";
-		}
-	}
+
 	return 0;
 }

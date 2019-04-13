@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-#define E 2.71828285f
+#define E 2.71828285
 
 double y(double);
 void swap(double *, double *);
@@ -36,10 +36,10 @@ int main()
 
 double y(double x)
 {
-	if (-5.0f < x && x <= 1.0f)
-		return pow(x, -15.0f);
-	else if (1.0f < x && x < 2.0f)
-		return (sqrt(x) * sin(pow(x, 2.0f)) - 1.3f) / ((pow(x, (1.0f / 3.0f)) + pow(E, 2.0f * x) + abs(cos(x))));
+	if (-5.0 < x && x <= 1.0)
+		return pow(x, -15.0);
+	else if (1.0 < x && x < 2.0)
+		return (sqrt(x) * sin(pow(x, 2.0)) - 1.3) / ((pow(x, (1.0 / 3.0)) + pow(E, 2.0 * x) + abs(cos(x))));
 
 	return pow(x, 10.0f);
 }

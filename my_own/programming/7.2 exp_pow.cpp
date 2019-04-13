@@ -2,16 +2,16 @@
 #include <cmath>
 using namespace std;
 
-#define E 2.71828285f // константа числа е
+#define E 2.71828285 // константа числа е
 
 // объявление функций
-double powEtoX(double, double);
+long double expPow(long double, long double);
 
 int main()
 {
 	// объявленные переменные
-	double epsilon; // точность вычисления
-	double x;		// возведение в степень ...
+	long double epsilon; // точность вычисления
+	long double x;		 // возведение в степень ...
 
 	cout << "x = ";
 	cin >> x;
@@ -20,7 +20,7 @@ int main()
 	cout << "power e to ("
 		 << x
 		 << ") = "
-		 << powEtoX(x, epsilon) // функция powEtoX
+		 << expPow(x, epsilon) // функция expPow
 		 << "\n\texp("
 		 << x
 		 << ") = "
@@ -31,18 +31,18 @@ int main()
 }
 
 // возвращает e^x
-double powEtoX(double x, double epsilon)
+long double expPow(long double x, long double epsilon)
 {
 	// объявленные переменные (и определение некоторых)
-	double slog = 1.0f; // слогаемое
-	double sum  = 1.0f;  // итоговое число
-	double n;			// от 0 -> ∞
-	int counter = 0;	// счетчик
+	long double slog = 1.0; // слогаемое
+	long double sum = 1.0;  // итоговое число
+	long double n;			// от 0 -> ∞
+	int counter = 0;		// счетчик
 
-	for (n = 1.0f; slog > epsilon; n += 1.0f)
+	for (n = 1.0; slog > epsilon; n += 1.0)
 	{
 		slog *= x / n; // x^n * x = x^(n+1), (n-1) * n = n! - формула n -> ∞ (x^n)/n!
-		sum  += slog;   // итог + слогаемое
+		sum += slog;   // итог + слогаемое
 		counter++;	 // счетчик + 1
 	}
 	cout << "counter = " << counter << endl;

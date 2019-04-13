@@ -21,7 +21,7 @@ double equation(char input[])
 			}
 			push(atof(number));
 		}
-		
+
 		while (input[i] == ' ' || input[i] == '\t')
 			i++;
 
@@ -41,17 +41,17 @@ double equation(char input[])
 			break;
 		case '/':
 			second_op = pop();
-			if (second_op != 0.0f)
+			if (second_op != 0.0)
 				push(pop() / second_op);
 			else
 			{
 				std::cout << "divide by zero" << std::endl;
-				return 0.0f;
+				return 0.0;
 			}
 			break;
 		default:
 			std::cout << "undefined error" << std::endl;
-			return 0.0f;
+			return 0.0;
 			break;
 		}
 	}
