@@ -6,27 +6,17 @@ double equation(char input[])
 	double second_op;
 	char number[SIZE];
 	int i;
-	int j;
+	int j = 0;
+	int type;
 
-	for (i = 0; input[i] != EOF; i++)
+	for (i = 0; (type = getop(input[i])) != EOF; i++)
 	{
-		while (input[i] == ' ' || input[i] == '\t')
-			i++;
-
-		if (isdigit(input[i]))
+		switch (type)
 		{
-			for (j = 0; isdigit(input[i]) || input[i] == '.'; j++)
-			{
-				number[j] = input[i++];
-			}
+		case NUMBER:
+			number[j++] += input[i];
 			push(atof(number));
-		}
-
-		while (input[i] == ' ' || input[i] == '\t')
-			i++;
-
-		switch (input[i])
-		{
+			break;
 		case ' ':
 			break;
 		case '+':

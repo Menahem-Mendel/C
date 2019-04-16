@@ -16,7 +16,7 @@ int get_sp();
 extern char buffer[];
 extern int bp;
 
-int getop(char[]);
+int getop(char);
 int getch();
 void ungetch(int);
 
