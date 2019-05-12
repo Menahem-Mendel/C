@@ -14,5 +14,7 @@ int main()
     x = clock() - x;
 
     cout << (float)clock() / CLOCKS_PER_SEC << endl;
+	int x = 8;
+
     return 0;
 }
