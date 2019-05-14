@@ -14,5 +14,5 @@ int main(void)
 
 unsigned int getbits(unsigned int x, int p, int n)
 {
-	return (x >> (p + 1 - n)) & ~(~0 << n);
+	return (x >> (p + 1 - n)) & ~(n);
 }

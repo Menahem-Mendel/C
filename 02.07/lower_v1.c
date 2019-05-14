@@ -4,7 +4,7 @@ int lower(int);
 
 int main()
 {
-	printf("%d", lower('I'));
+	printf("%c", lower('I'));
 	return 0;
 }
 

@@ -1,12 +1,14 @@
 #include <stdio.h>
 
+int lower(int);
+
 int main()
 {
-	long num_char;
-
-	num_char = 0;
-	while (getchar() != EOF)
-		++num_char;
-	printf("%ld\n", num_char);
+	printf("%c", lower('I'));
 	return 0;
+}
+
+int lower(int input)
+{
+	return (input >= 'A' && input <= 'Z') ? input + 'a' - 'A' : input;
 }
