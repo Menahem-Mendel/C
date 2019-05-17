@@ -2,18 +2,20 @@
 
 int main()
 {
-    int input, num_line, num_tab, num_space;
+	int input,
+		n_line,
+		n_tab,
+		n_space;
 
-    num_line = num_tab = num_space = 0;
-    while ((input = getchar()) != EOF)
-    {
-        if (input == '\n')
-            ++num_line;
-        if (input == ' ')
-            ++num_space;
-        if (input == '\t')
-            ++num_tab;
-    }
-    printf("%d, %d, %d\n", num_line, num_space, num_tab);
-    return 0;
+	n_line = n_tab = n_space = 0;
+	while ((input = getchar()) != EOF)
+		if (input == '\n')
+			++n_line;
+		else if (input == ' ')
+			++n_space;
+		else if (input == '\t')
+			++n_tab;
+
+	printf("%d, %d, %d\n", n_line, n_space, n_tab);
+	return 0;
 }

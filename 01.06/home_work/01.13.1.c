@@ -2,11 +2,13 @@
 
 int main()
 {
-	int input, index, char_count;
+	int input,
+		index,
+		char_count;
 	int array[100];
 
 	char_count = 0;
-	for (int index = 0; index < 100; index++)
+	for (index = 0; index < 100; index++)
 		array[index] = 0;
 	index = 0;
 

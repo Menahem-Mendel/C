@@ -5,7 +5,8 @@
 
 int main()
 {
-	printf("%d", EOF);
+	int input;
 
-	return 0;
+	while ((input = getchar()) != EOF)
+		printf("%d, ", input);
 }
