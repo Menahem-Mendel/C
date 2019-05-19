@@ -2,7 +2,10 @@
 
 int main()
 {
-	int input, index, num_white_space, num_other;
+	int input,
+		index,
+		num_white_space,
+		num_other;
 	int num_digit[10];
 
 	num_white_space = num_other = 0;
