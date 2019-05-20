@@ -1,3 +1,7 @@
+/*
+	копирование входного потока в выходной
+*/
+
 #include <stdio.h>
 
 int main()
@@ -5,6 +9,7 @@ int main()
 	int input;
 
 	input = getchar();
+
 	while (input != EOF)
 	{
 		putchar(input);

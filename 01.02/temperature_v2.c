@@ -1,21 +1,27 @@
-// this program needs to output
-// fahrenheit converted form the celsius
+/*
+	вавод таблицы температур по фаренгейту и цельсию
+	перевод из фаренгейта в цельсий
+*/
 
 #include <stdio.h>
 
 int main()
 {
-    float fahrenheit, celsius;
-    int lower, upper, step;
+    float fahrenheit, // фаренгейт
+        celsius;      // цельсий
+
+    int lower, // нижняя граница температур
+        upper, // верхняя граница температур
+        step;  // величина шага
 
     lower = 0;
     upper = 300;
     step = 20;
+    fahrenheit = (float)lower;
 
-    fahrenheit = lower;
     while (fahrenheit <= upper)
     {
-        celsius = (5.0 / 9.0) * (fahrenheit - 32.0);
+        celsius = (5.0f / 9.0f) * (fahrenheit - 32.0f);
         printf("%3.0f\t%6.1f\n", fahrenheit, celsius);
         fahrenheit += step;
     }

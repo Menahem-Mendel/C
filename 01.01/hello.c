@@ -1,10 +1,8 @@
-// this program needs to output
-// "hello, world" on the screen
-
-#include<stdio.h>
-
-int main()
+// включение информации о стандартной библиотеке0
+#include <stdio.h> // стандартная библиотека
+int main()         // определение функции main без аргументов
+// операторы main заключаются в фигурные скобки
 {
-    printf("hello, world\n");
-    return 0;
+    printf("hello, world\n"); // библиотечная функция printf выводит строку
+    return 0;                 // return 0 сообщает операционной системе что программа успешно завершена
 }

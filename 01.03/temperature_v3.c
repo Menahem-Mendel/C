@@ -1,5 +1,7 @@
-// this program needs to output
-// celsius converted form the fahrenheit
+/*
+	вавод таблицы температур по фаренгейту и цельсию
+	перевод из фаренгейта в цельсий
+*/
 
 #include <stdio.h>
 

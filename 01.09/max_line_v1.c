@@ -1,42 +1,62 @@
-#include <stdio.h>
-#define MAXLINE 1000
+/*
+	вывод самой длинной строки в потоке
+*/
 
-int getline(char *, int);
-void copy(char *, char *);
+#include <stdio.h>
+
+#define MAXSTRING 1000 // максимальная длина строки
+
+int getline(char[], int);
+void copy(char[], char[]);
 
 int main()
 {
-	int length, max_line;
-	char line[MAXLINE], longest[MAXLINE];
+	int length,				// длина текущей строки
+		max_string;			// текущая максимальная длина
+	char string[MAXSTRING], // текущая введенная строка
+		longest[MAXSTRING]; //самая длинная строка из введенных
 
-	max_line = 0;
-	while ((length = getline(line, MAXLINE)) > 0)
-		if (length > max_line)
+	max_string = 0;
+
+	while ((length = getline(string, MAXSTRING)) > 0)
+		if (length > max_string)
 		{
-			max_line = length;
-			copy(longest, line);
+			max_string = length;
+			copy(longest, string);
 		}
-	if (max_line > 0)
+
+	if (max_string > 0)
 		printf("%s", longest);
 	return 0;
 }
 
+// считывает строку в string, возвращает ее длину
 int getline(char string[], int limit)
 {
-	int input, index;
+	int input,
+		index;
+
 	for (index = 0; index < limit - 1 && (input = getchar()) != EOF && input != '\n'; ++index)
 		string[index] = input;
+
 	if (input == '\n')
 	{
 		string[index] = input;
 		++index;
 	}
+
 	string[index] = '\0';
+
 	return index;
 }
 
+// копирует строку from в to. длина to считается достаточной
 void copy(char to[], char from[])
 {
-	for (int index = 0; (to[index] = from[index]) != '\0'; ++index)
-		;
+	int index;
+
+	index = 0;
+
+	while ((longest[index] = string[index]) != '\0')
+		++index;
 }

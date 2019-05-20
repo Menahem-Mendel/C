@@ -1,5 +1,7 @@
-// this program needs to output
-// celsius converted form the fahrenheit
+/*
+    доработайте программу преобразования температур так, 
+    чтобы она выводила таблицу в обратном порядке, т.е. от 300 градусов до нуля
+*/
 
 #include <stdio.h>
 

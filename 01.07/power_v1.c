@@ -1,3 +1,7 @@
+/*
+    функция power возводит x в степень n
+*/
+
 #include <stdio.h>
 #define MAXLINE 1000
 
@@ -5,19 +9,21 @@ int power(int, int);
 
 int main()
 {
-    int index;
+    int i_n;
 
-    for (index = 0; index < 10; ++index)
-        printf("%d %d %d\n", index, power(2, index), power(-3, index));
+    for (i_n = 0; i_n < 10; ++i_n)
+        printf("%d\t%3d\t%6d\n", i_n, power(2, i_n), power(-3, i_n));
     return 0;
 }
 
-int power(int x, int y)
+int power(int x, int n)
 {
-    int index, power;
+    int index,
+        power;
 
     power = 1;
-    for (index = 1; index <= y; ++index)
+
+    for (index = 1; index <= n; ++index)
         power *= x;
     return power;
 }
