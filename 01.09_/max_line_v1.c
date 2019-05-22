@@ -4,21 +4,22 @@
 
 #include <stdio.h>
 
-#define MAXSTRING 1000 // максимальная длина строки
+#define MAXLENGTH 1000 // максимальная длина строки
 
-int getline(char[], int);
+int getstring(char[], int);
 void copy(char[], char[]);
 
 int main()
 {
-	int length,				// длина текущей строки
-		max_string;			// текущая максимальная длина
-	char string[MAXSTRING], // текущая введенная строка
-		longest[MAXSTRING]; //самая длинная строка из введенных
+	int length,		// длина текущей строки
+		max_string; // текущая максимальная длина
+
+	char string[MAXLENGTH], // текущая введенная строка
+		longest[MAXLENGTH]; // самая длинная строка из введенных
 
 	max_string = 0;
 
-	while ((length = getline(string, MAXSTRING)) > 0)
+	while ((length = getstring(string, MAXLENGTH)) > 0)
 		if (length > max_string)
 		{
 			max_string = length;
@@ -31,7 +32,7 @@ int main()
 }
 
 // считывает строку в string, возвращает ее длину
-int getline(char string[], int limit)
+int getstring(char string[], int limit)
 {
 	int input,
 		index;
@@ -46,7 +47,6 @@ int getline(char string[], int limit)
 	}
 
 	string[index] = '\0';
-
 	return index;
 }
 
@@ -57,6 +57,6 @@ void copy(char to[], char from[])
 
 	index = 0;
 
-	while ((longest[index] = string[index]) != '\0')
+	while ((to[index] = from[index]) != '\0')
 		++index;
 }

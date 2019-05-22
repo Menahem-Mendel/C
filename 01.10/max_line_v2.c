@@ -4,13 +4,13 @@
 
 #include <stdio.h>
 
-#define MAXSTRING 1000
+#define MAXLENGTH 1000
 
 int max_string;
-char string[MAXSTRING];
-char longest[MAXSTRING];
+char string[MAXLENGTH];
+char longest[MAXLENGTH];
 
-int get_line(void);
+int getstring(void);
 void copy(void);
 
 int main()
@@ -21,7 +21,7 @@ int main()
 
 	max_string = 0;
 
-	while ((length = get_line()) > 0)
+	while ((length = getstring()) > 0)
 		if (length > max_string)
 		{
 			max_string = length;
@@ -33,12 +33,12 @@ int main()
 	return 0;
 }
 
-int get_line(void)
+int getstring(void)
 {
 	int input, index;
 	extern char string[];
 
-	for (index = 0; index < MAXSTRING - 1 && (input = getchar()) != EOF && input != '\n'; ++index)
+	for (index = 0; index < MAXLENGTH - 1 && (input = getchar()) != EOF && input != '\n'; ++index)
 		string[index] = input;
 
 	if (input == '\n')
