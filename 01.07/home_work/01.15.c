@@ -16,7 +16,6 @@ int main()
     lower = 0;
     upper = 300;
     step = 20;
-
     fahrenheit = lower;
 
     while (fahrenheit <= upper)

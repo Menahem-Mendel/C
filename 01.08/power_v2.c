@@ -1,5 +1,5 @@
 /*
-    функция power возводит x в степень n
+    тестирование power функциивозводения в степень
 */
 
 #include <stdio.h>
@@ -16,6 +16,7 @@ int main()
     return 0;
 }
 
+// функция power возводит x в степень n
 int power(int x, int n)
 {
     int power;

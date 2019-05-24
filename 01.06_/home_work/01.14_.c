@@ -39,6 +39,7 @@ int main()
 		{
 			if (index > 0)
 				putchar(' ');
+
 			if (array[index] == max_value)
 			{
 				putchar('|');
